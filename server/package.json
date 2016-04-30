@@ -1,22 +1,14 @@
 {
-  "name": "funWithSockets",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leranf/funWithSockets.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/leranf/funWithSockets/issues"
-  },
-  "homepage": "https://github.com/leranf/funWithSockets#readme",
   "devDependencies": {
     "babel-cli": "^6.7.7",
     "babel-core": "^6.7.7",
