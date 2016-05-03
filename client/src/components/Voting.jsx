@@ -1,27 +1,12 @@
 import React from 'react';
+import Winner from './Winner';
+import Vote from './Vote';
 
 export default React.createClass({
-  getPair: () => {
-    return this.props.pair || [];
-  },
-  isDisabled: function() {
-    return !!this.props.hasVoted;
-  },
-  hasVotedFor: entry => {
-    return this.props.hasVoted === entry;
-  },
   render: () => (
-    <div className="voting">
-      {this.props.winner ?
-        <div ref="winner">Winner is {this.props.winner}!</div> :
-        {this.getPair().map(entry =>
-          <button key={entry} onClick={() => this.props.vote(entry)}
-            disabled={this.isDisabled()}>
-            <h1>{entry}</h1>
-            {this.hasVotedFor(entry) ? <div className="label">Voted</div> : null}
-          </button>
-        )}
-      }
+    <div> {this.props.winner ?
+      <Winner ref="winner" winner={this.props.winner} /> :
+      <Vote {...this.props} />}
     </div>;
   )
 });
